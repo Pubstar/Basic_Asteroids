@@ -9,6 +9,8 @@ namespace Basic_Asteroids
     /// </summary>
     public class Game1 : Game
     {
+        Spaceship spaceship;
+
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
@@ -28,6 +30,9 @@ namespace Basic_Asteroids
         {
             // TODO: Add your initialization logic here
 
+
+            spaceship = new Spaceship("The Pursuer", 100);
+
             base.Initialize();
         }
 
@@ -39,6 +44,8 @@ namespace Basic_Asteroids
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            spaceship.LoadContent(Content);
 
             // TODO: use this.Content to load your game content here
         }
@@ -63,6 +70,7 @@ namespace Basic_Asteroids
                 Exit();
 
             // TODO: Add your update logic here
+           
 
             base.Update(gameTime);
         }
@@ -74,7 +82,11 @@ namespace Basic_Asteroids
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
 
+            spaceship.Draw(spriteBatch);
+
+            spriteBatch.End();
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
