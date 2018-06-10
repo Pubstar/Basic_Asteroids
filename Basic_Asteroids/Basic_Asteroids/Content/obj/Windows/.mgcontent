@@ -4,6 +4,6 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/giova/Desktop/Basic_Asteroids/Basic_Asteroids/Content/alienspaceship.png</File>
+    <File>C:/Users/Pieter/Desktop/Basic_Asteroids/Basic_Asteroids/Content/player.png</File>
   </SourceFiles>
 </SourceFileCollection>

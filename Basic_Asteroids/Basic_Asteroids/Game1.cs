@@ -9,7 +9,7 @@ namespace Basic_Asteroids
     /// </summary>
     public class Game1 : Game
     {
-        Spaceship spaceship;
+        Player player;
 
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
@@ -29,10 +29,7 @@ namespace Basic_Asteroids
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
-
-            spaceship = new Spaceship("The Pursuer", 100);
-
+            player = new Player(new Vector2(100,100), new Vector2(10,10));
             base.Initialize();
         }
 
@@ -44,9 +41,7 @@ namespace Basic_Asteroids
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
-            spaceship.LoadContent(Content);
-
+            player.LoadContent(Content);
             // TODO: use this.Content to load your game content here
         }
 
@@ -70,8 +65,7 @@ namespace Basic_Asteroids
                 Exit();
 
             // TODO: Add your update logic here
-           
-
+            player.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -83,9 +77,7 @@ namespace Basic_Asteroids
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-
-            spaceship.Draw(spriteBatch);
-
+            player.Draw(spriteBatch);
             spriteBatch.End();
             // TODO: Add your drawing code here
 
