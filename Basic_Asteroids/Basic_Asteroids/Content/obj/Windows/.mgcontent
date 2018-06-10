@@ -4,6 +4,7 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/Pieter/Desktop/Basic_Asteroids/Basic_Asteroids/Content/player.png</File>
+    <File>C:/Users/tommy/Documents/GitHub/Basic_Asteroids/Basic_Asteroids/Basic_Asteroids/Content/player.png</File>
+    <File>C:/Users/tommy/Documents/GitHub/Basic_Asteroids/Basic_Asteroids/Basic_Asteroids/Content/spacebackground.png</File>
   </SourceFiles>
 </SourceFileCollection>
